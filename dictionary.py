@@ -20,7 +20,7 @@ class Dictionary:
             while n <= len(campi) - 1:
                 self.dictionary[campi[0]].append(campi[n])
                 n += 1
-
+        print(self.dictionary)
         pass
 
     def translate(self, query):

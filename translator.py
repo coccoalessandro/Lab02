@@ -45,9 +45,4 @@ class Translator:
         pass
 
     def printAllDict(self):
-        mystr = ''
-        for key in self.dictionary:
-            mystr += key + ' ; '
-            for traduzione in self.dictionary[key]:
-                mystr += traduzione + ', '
-        print(mystr)
+        print(self.dictionary)

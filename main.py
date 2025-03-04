@@ -2,11 +2,11 @@ import translator as tr
 
 t = tr.Translator()
 
+t.loadDictionary("dictionary.txt")
+
 while(True):
 
     t.printMenu()
-
-    t.loadDictionary("dictionary.txt")
 
     txtIn = input()
 
