@@ -22,7 +22,7 @@ while(True):
                     flag = True
                     print("Errore inserimento")
             if flag == False:
-                t.handleAdd(txtIn)
+                t.handleAdd(txtIn.lower().strip())
                 print("Aggiunta!")
                 pass
         elif int(txtIn) == 2:
@@ -34,18 +34,12 @@ while(True):
                     flag = True
                     print("Errore inserimento")
             if flag == False:
-                t.handleTranslate(txtIn.strip())
+                t.handleTranslate(txtIn.lower().strip())
                 pass
         elif int(txtIn) == 3:
             print('Ok, quale parola devo cercare?')
             txtIn = input()
-            flag = False
-            for parola in txtIn.split(" "):
-                if parola.isalpha() == False:
-                    flag = True
-                    print("Errore inserimento")
-            if flag == False:
-                t.handleWildCard(txtIn.strip())
+            t.handleWildCard(txtIn.lower().strip())
             pass
         elif int(txtIn) == 4:
             t.printAllDict()
