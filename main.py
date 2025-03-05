@@ -39,7 +39,10 @@ while(True):
         elif int(txtIn) == 3:
             print('Ok, quale parola devo cercare?')
             txtIn = input()
-            t.handleWildCard(txtIn.lower().strip())
+            if (txtIn.count('?') != 1):
+                print("Errore inserimento")
+            else :
+                t.handleWildCard(txtIn.lower().strip())
             pass
         elif int(txtIn) == 4:
             t.printAllDict()
